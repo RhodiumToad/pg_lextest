@@ -5,4 +5,7 @@
 
 CREATE FUNCTION lexer_test(cstring) RETURNS void AS 'MODULE_PATHNAME' LANGUAGE C VOLATILE;
 
+CREATE FUNCTION lexer(cstring) RETURNS TABLE (pos integer, token integer, value text)
+  AS 'MODULE_PATHNAME' LANGUAGE C VOLATILE;
+
 -- end
